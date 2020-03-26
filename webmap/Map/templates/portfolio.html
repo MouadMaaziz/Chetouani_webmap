@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }} | Blogs {% endblock %}
+{{% block body %}
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'blog/css/base_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/vendor_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
+
+    <!-- script <script src="js/modernizr.js"></script>
+    ================================================== -->
+
+
+</head>
+
+<body id="top">
+
+
+    <!-- featured
+    ================================================== -->
+    <section class="s-featured">
+        <div class="row">
+            <div class="col-full">
+
+                <div class="featured-slider featured" data-aos="zoom-in">
+
+                  {% for port in list %}
+
+                    <div class="featured__slide">
+                        <div class="entry">
+
+                            <div class="entry__background" style="background-image:url('{{port.Photo.url}}');"></div>
+
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="#0">{{port.Domaine}}</a></span>
+
+                                <h1><a href="{% url 'detail' port.id %}" title="">{{port.Titre}}</a></h1>
+
+                                <div class="entry__info">
+                                    <a href="#0" class="entry__profile-pic">
+                                        <img class="avatar" src="{% static 'app/img/avatar.jpg' %}" alt="">
+                                    </a>
+                                    <ul class="entry__meta">
+                                        <li><a href="#0">{{port.pub}}</a></li>
+                                        <li>{{port.Date_cus}}</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end entry__content -->
+
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+
+                    {% endfor %}
+
+                </div> <!-- end featured -->
+
+            </div> <!-- end col-full -->
+        </div>
+    </section> <!-- end s-featured -->
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content">
+      <div class="separator">
+      <img src="{% static 'app/img/crosshair-long2.png' %}" alt=""class="separator" > </div>
+      <h1>Plus des blogs</h1>
+        <div class="row entries-wrap wide">
+            <div class="entries">
+              {% for port in portfolios %}
+                <article class="col-block">
+
+                    <div class="item-entry" data-aos="zoom-in">
+                        <div class="item-entry__thumb">
+                            <a href="{% url 'detail' port.id %}" class="item-entry__thumb-link">
+                                <img src="{{port.Photo.url}}"
+                                     srcset="{{port.Photo.url}} 1x, {{port.Photo.url}} 2x" alt="">
+                            </a>
+                        </div>
+
+                        <div class="item-entry__text">
+                            <div class="item-entry__cat">
+                                <a >{{port.Domaine}}</a>
+                            </div>
+
+                            <h1 class="item-entry__title"><a href="{% url 'detail' port.id %}">{{port.Titre}}</a></h1>
+
+                            <div class="item-entry__date">
+                                <a  class="far fa-clock" > {{port.Date_cus}}</a>
+                            </div>
+                        </div>
+                    </div> <!-- item-entry -->
+
+                </article> <!-- end article -->
+                {% endfor %}
+
+
+            </div> <!-- end entries -->
+        </div> <!-- end entries-wrap -->
+        <nav class="pgn aos-init aos-animate" data-aos="fade-up">
+        <ul>
+          {% if portfolios.has_previous  %}
+        <li><a class="pgn__prev" href="?{{page_request_var}}={{portfolios.previous_page_number}}">Prev</a></li>
+        {% endif %}
+
+        <li><span class="pgn__num current ">{{portfolios.number}}</span></li>
+
+        {% if portfolios.has_next  %}
+        <li><a class="pgn__next" href="?{{page_request_var}}={{portfolios.next_page_number}}">Next</a></li>
+        {% endif %}
+        </ul>
+        </nav>
+
+
+    </section> <!-- end s-content -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'blog/js/plugins.js' %}"></script>
+    <script src="{% static 'blog/js/main.js' %}"></script>
+{% endblock %}

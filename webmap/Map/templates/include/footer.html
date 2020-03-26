@@ -1,0 +1,109 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/css/base_blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/vendor_blog.css' %}">
+<link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
+
+<script type="text/javascript" src="{% static 'app/floating-whatsapp/jquery-3.3.1.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'app/floating-whatsapp/floating-wpp.css' %}">
+<script type="text/javascript" src="{% static 'app/floating-whatsapp/floating-wpp.js' %}"></script>
+  <footer class="s-footer">
+
+      <div class="s-footer__main">
+          <div class="row">
+
+              <div class="col-lg-5 mb-5">
+
+                  <h4>A propos de Nous</h4>
+
+                  <p class='footer-txt'>{{about.Introduction}}</p>
+
+              </div> <!-- end s-footer__about -->
+
+
+                <div class="col-lg-3 mb-5 text-center">
+
+                      <h4>Ou nous trouver?</h4>
+
+                      <p class='footer-txt'>
+                      {{contact.Adress}}
+                      </p>
+
+                </div>
+
+                <div class="col-lg-4 mb-5 text-center">
+
+                      <h4>Infos de contact</h4>
+
+                      <p class='footer-txt'>{{contact.Email}}
+                      </p>
+                      <br>
+                      <p class='footer-txt'>{{contact.Phone}}
+                      </p>
+
+                </div>
+
+
+
+          </div>
+      </div> <!-- end s-footer__main -->
+
+      <div class="s-footer__bottom">
+          <div class="row">
+
+              <div class="col-six">
+                  <ul class="footer-social">
+                      <li>
+                          <a href="{{contact.facebookPage}}"><i class="fab fa-facebook"></i></a>
+                      </li>
+                      <li>
+                          <a href="{{contact.Email}}"><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li>
+                          <a href="{{contact.instaProfile}}"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li>
+                          <a href="{{contact.Email}}"><i class="fab fa-youtube"></i></a>
+                      </li>
+                      <li>
+                          <a href="{{contact.linkedIn}}"><i class="fab fa-linkedin"></i></a>
+                      </li>
+                  </ul>
+              </div>
+
+              <div class="col-six">
+                  <div class="s-footer__copyright">
+                      <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+                  </div>
+              </div>
+
+          </div>
+      </div> <!-- end s-footer__bottom -->
+
+      <div class="go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+      <div id="myButton"></div>
+
+  </footer> <!-- end s-footer -->
+    <div id="go-top">
+        <a class="smoothscroll" title="back to top" href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#myButton').floatingWhatsApp({
+                phone: '{{contact.Phone}}',
+                popupMessage: 'Bonjour! En quoi nous pouvons vous être utiles ?',
+                message: "Bonjour! J'aimerai vous consulter sur ",
+                showPopup: true,
+                showOnIE: false,
+                headerTitle: 'CHETOUANI TOPOGRAPHIE & GEOMATIQUE',
+                headerColor: '#25d366',
+                backgroundColor: '#000',
+                buttonImage: '<img src="{% static 'app/floating-whatsapp/whatsapp.svg' %}" />',
+                size: '50px'
+            });
+        });
+    </script>

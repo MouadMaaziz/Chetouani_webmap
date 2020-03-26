@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }} | Blogs {% endblock %}
+{{% block body %}
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'blog/css/base_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/vendor_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
+
+    <!-- script <script src="js/modernizr.js"></script>
+    ================================================== -->
+
+
+</head>
+<body id="top">
+
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--top-padding s-content--narrow">
+
+        <article class="row entry format-standard">
+
+            <div class="col-full s-content__header">
+                <div class="entry__post-thumb">
+                  <p>
+                    <img src="{{blog.Photo.url}}"
+                         srcset="{{blog.Photo.url}} 2000w,
+                                 {{blog.Photo.url}} 1000w,
+                                {{blog.Photo.url}} 500w"
+                         sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                         </p>
+                </div>
+            </div>
+
+            <div class="entry__header col-full">
+                <h1 class="entry__header-title display-1">
+                    {{blog.Titre}}
+                </h1>
+                <ul class="entry__header-meta">
+                    <li class="date">{{blog.Date_cus}}</li>
+                    <li class="byline">
+                        Par
+                        <a href="#0">{{blog.pub}}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-full entry__main">
+
+                <p class="lead drop-cap">{{blog.Contenu | safe}}</p>
+
+            </div> <!-- s-entry__main -->
+            <div class="col-full entry__main">
+
+
+                <div class="entry__author">
+                    <img src="{{about.Photo_Personel.url}}" alt="">
+
+                    <div class="entry__author-about">
+                        <h5 class="entry__author-name">
+                            <span>Posted by</span>
+                            <a href="#0">{{blog.pub}}</a>
+                        </h5>
+
+                        <div class="entry__author-desc">
+                            <p>
+                            {{about.qui_Somme_Nous}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- s-entry__main -->
+
+        </article> <!-- end entry/article -->
+
+        <div class="separator">
+        <img src="{% static 'app/img/crosshair-long.png' %}" alt=""class="separator" > </div>
+        <div class="s-content__entry-nav">
+            <div class="row s-content__nav">
+                <div class="col-six s-content__prev">
+                    <a href="{% url 'detail' prev.pk %}" rel="prev">
+                        <span>Post precedent</span>
+
+                          {{prev}}
+
+                    </a>
+                </div>
+                <div class="col-six s-content__next">
+                    <a href="{% url 'detail' next.pk %}" rel="next">
+                        <span>Post suivant</span>
+                        {{next}}
+                    </a>
+                </div>
+            </div>
+        </div> <!-- end s-content__pagenav -->
+        <div class="separator">
+        <img src="{% static 'app/img/crosshair-long2.png' %}" alt=""class="separator" > </div>
+
+
+    </section> <!-- end s-content -->
+
+    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'blog/js/plugins.js' %}"></script>
+    <script src="{% static 'blog/js/main.js' %}"></script>
+{% endblock %}

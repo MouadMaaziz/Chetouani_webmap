@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+{% block title %}{{ block.super }} | Home {% endblock %}
+{% block body %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+
+    <link rel="stylesheet" href="{% static 'blog/css/base_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/vendor_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
+
+
+
+  <body>
+
+<section id="intro">
+    <div class="intro-overlay"></div>
+    <div class="header-video">
+        <video  id="videoBG" autoplay poster="{% static 'app/img/poster.png' %}" autoplay muted loop >
+          <source src="{% static 'app/video/teaser-video2.mp4' %}" type="video/mp4">
+
+        </video>
+        <div class="row">
+            <div class="col-twelve">
+                <p class="intro-position">
+                    <span>We are here to create a lasting relationship with you</span>
+                </p>
+                <h1>CHETOUANI TOPOGRAPHIE & GEOMATIQUE</h1>
+                <p class="lead">
+                    <span>GEOMATIQUE - AMENAGEMENT - EXPERTISE FONCIERE </span>
+                </p>
+        </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="resume-intro">
+<div class="resume-intro">
+
+    <p class="resume-content">
+    {{about.Introduction}}
+    </p><br>
+  <div class="fb-page" data-href="https://www.facebook.com/chetopgeo/" data-tabs=""data-width="350" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chetopgeo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chetopgeo/">Sté Chetouani Topographie &amp; Geomatique</a></blockquote></div>
+
+</div>
+<div class="separator">
+<img src="{% static 'app/img/crosshair-long.png' %}" alt=""class="separator" > </div>
+</section>
+
+
+<section id="codehub-intro">
+    <div class="codehub-intro ">
+        <h1>Nos prestations de service</h1>
+
+          <div class="codehub-content ">
+
+            <div class="codehub-section">
+              <a href="{% url 'topographie' %}">
+                <span class="icon"><i class="fas fa-drafting-compass"></i> </span>
+                <h1>Topograpie</h1>
+                <p>Topographie, travaux-divers en 3D</p>
+                </a>
+            </div>
+
+              <div class="codehub-section ">
+                <a href="{% url 'assistance' %}">
+               <span class="icon"><i class="fas fa-hands-helping"></i> </span>
+                <h1>Assistance</h1>
+                <p >Assistance aux maitres des ouvrages,maitres d'oeuvres et entreprises d'execution</p>
+                </a>
+            </div>
+
+            <div class="codehub-section ">
+              <a href="{% url 'geomatique' %}">
+                <span class="icon"><i class="fas fa-layer-group"></i> </span>
+                <h1>Geomatique</h1>
+                <p>Geomatique: SIG et teledetection</p>
+                </a>
+            </div>
+
+            <div class="codehub-section  ">
+              <a href="{% url 'formations' %}">
+                <span class="icon"><i class="fas fa-chalkboard-teacher"></i> </span>
+                <h1>Formations</h1>
+                <p>Formations et conseils</p>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="separator">
+    <img src="{% static 'app/img/crosshair-long2.png' %}" alt=""class="separator" > </div>
+</section>
+
+<!-- ==================== Blog_section=====================-->
+
+<section class="s-content">
+
+    <div class="row entries-wrap wide">
+      <h1>Nos blogs recentes</h1>
+        <div class="entries">
+          {% for port in list %}
+            <article class="col-block">
+
+                <div class="item-entry" data-aos="zoom-in">
+                    <div class="item-entry__thumb">
+                        <a href="{% url 'detail' port.id %}" class="item-entry__thumb-link">
+                            <img src="{{port.Photo.url}}"
+                                 srcset="{{port.Photo.url}} 1x, {{port.Photo.url}} 2x" alt="">
+                        </a>
+                    </div>
+
+                    <div class="item-entry__text">
+                        <div class="item-entry__cat">
+                            <a href="category.html">{{port.Domaine}}</a>
+                        </div>
+
+                        <h1 class="item-entry__title"><a href="{% url 'detail' port.id %}">{{port.Titre}}</a></h1>
+
+                        <div class="item-entry__date">
+                            <a  class="far fa-clock" > {{port.Date_cus}}</a>
+                        </div>
+                    </div>
+                </div> <!-- item-entry -->
+
+            </article> <!-- end article -->
+            {% endfor %}
+
+
+        </div> <!-- end entries -->
+
+    </div> <!-- end entries-wrap -->
+    <div class="row">
+      <div class="voirplus">
+        <h4><a href="{% url 'portfolio' %}"  class="button">VOIR PLUS</a></h4>
+      </div>
+
+    </div>
+
+</section> <!-- end s-content -->
+
+<script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'blog/js/plugins.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+
+{% endblock %}

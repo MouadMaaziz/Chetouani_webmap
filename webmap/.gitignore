@@ -1,0 +1,7 @@
+*.pyc
+/media
+db.sqlite3
+__pycache__/
+*.log
+
+requirements.txt

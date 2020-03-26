@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{ block.super }} | About {% endblock %}
+{{% block body %}
+
+
+<link rel="stylesheet" href="{% static 'app/css/about.css' %}">
+<style>
+#intro {
+    background:#100e17 url("{{about.Photos_ArrierePlan.url}}") no-repeat ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment:fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align:center;
+    display:table;
+}
+</style>
+
+
+<section id="intro">
+     <div class="intro-overlay"></div>
+    <div class="intro-content">
+        <div class="row">
+            <div class="col-twelve">
+                <p class="intro-position">
+                    <span>~Nos simples interets ~</span>
+                </p>
+                <h1>Nous sommes des <br>
+		 <span class="txt-type" data-wait="1000" data-words='["Topographes", "Géomaticiens", "Développeurs"]'></span>
+		</h1>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="s-content s-content--top-padding s-content--narrow">
+
+    <div class="row narrow">
+        <div class="col-full s-content__header">
+            <h1 class="display-1 display-1--with-line-sep">A propos de Ste.Chetouani. </h1>
+            <p class="lead">
+
+            {{about.Introduction}}</p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="">
+            <p>
+            <img src="{{about.Photos_dentreprise.url}}"
+                 srcset="{{about.Photos_dentreprise.url}} 2000w,
+                         {{about.Photos_dentreprise.url}} 1000w,
+                         {{about.Photos_dentreprise.url}} 500w"
+                 sizes="(max-width: 2000px) 100vw, 2000px" alt="" class="about-photo">
+            </p>
+
+            <h2>Voila notre histoire</h2>
+            <p>
+            {{about.notre_Histoire}}
+            </p>
+
+            <hr>
+
+            <div class="row block-1-2 block-tab-full">
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">Qui Somme Nous.</h4>
+                    <p>{{about.qui_Somme_Nous}}</p>
+                </div>
+
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">Nos Missions.</h4>
+                    <p>{{about.nos_Missions}}</p>
+                </div>
+
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">Notre Vision.</h4>
+                    <p>{{about.notre_Vision}}</p>
+                </div>
+
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">Nos  Valeurs.</h4>
+                    <p>{{about.nos_Valeurs}}</p>
+                </div>
+
+            </div>
+
+        </div> <!-- s-content__main -->
+    </div> <!-- end row -->
+    <div class="col ">
+      <h4>Ou somme nous aujourd'hui ?</h4>
+      {% include 'webmap.html' %}
+    </div>
+
+</section> <!-- end s-content -->
+
+
+{% endblock %}

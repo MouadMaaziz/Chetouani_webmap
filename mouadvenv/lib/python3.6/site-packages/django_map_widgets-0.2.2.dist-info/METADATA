@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: django-map-widgets
+Version: 0.2.2
+Summary: Map widgets for Django PostGIS fields
+Home-page: https://github.com/erdem/django-map-widgets
+Author: Erdem Ozkol
+Author-email: erdemozkol@gmail.com
+License: MIT
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+
+Configurable, pluggable and more user friendly map widgets for Django PostGIS fields.
+
+
