@@ -13,7 +13,7 @@ class Portfolio(models.Model):
     Photo = models.ImageField(upload_to='')
     Date_de_pub = models.DateTimeField(auto_now=False,null=True)
     draft = models.BooleanField(default=False)
-    Domaine= models.CharField(max_length=30,null=True)
+    Mot_Cle= models.CharField(max_length=30,null=True)
 
 
 

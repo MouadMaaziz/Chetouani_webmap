@@ -57,21 +57,32 @@
   width:20%;
   margin-left:0px
 }
-
+.telpop{
+  font-weight: bold
+}
+.servicespop{
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+.fas{
+  margin-right: 3%;
+  color: #096cb1;
+  font-size: medium;
+}
 .nompop{
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
-  margin-left: 12%;
+
 }
 .description{
   text-align: center;
   position: static;
-
-
+  text-transform: uppercase;
 }
 .label{
-  color: green;
-  font-size: 16px;
+  color: #096cb1;
+  font-size: 14px;
+  font-family: 'Roboto';
 
 }
 .bg{
@@ -84,7 +95,7 @@
 }
 
 .leaflet-popup-content-wrapper {
-  width: 300px;
+  width: 250px;
   text-align: center;
 }
 
@@ -96,7 +107,8 @@
 .leaflet-container {  /* all maps */
   height: 600px;
   width: 90%;
-  margin: auto
+  margin: auto;
+  z-index: 0;
 
 }
 @media (max-width:750px){
@@ -162,6 +174,12 @@
     border-radius: 2%;
 
 }
+.leaflet-popup-content {
+
+    margin: 5px 19px 1px 19px;
+    line-height: 1.2;
+
+}
 </style>
 <!-- Custom styles for this template -->
 <link href="jumbotron.css" rel="stylesheet">
@@ -210,12 +228,14 @@
           onEachFeature: function (feature, layer) {
 
             var mypopup = "<img class='popupimg ' src ="+ feature.properties.link + '>'+
-            "<div class= 'nompop'>"+ feature.properties.Nom + '</div><br>'+
-            "<div class= 'description'>" +
-            "<div class= 'label'></div> "+ feature.properties.Description + '<br>'+
-            "<div class= 'label'>Type:</div> " + feature.properties.Type +'<br>'+
-            "<div class= 'label'>Adresse</div> "+ feature.properties.Adress + '<br>'
-            '</div>'
+            "<div class= 'nompop'>"+ feature.properties.Nom + '</div>'+
+            "<div class= 'description'>"+ feature.properties.Département + '</div> <br>'+
+            "<div class= 'label'>Services:</div> " + "<div class= 'servicespop'> "+ feature.properties.Services +'</div><br>'+
+            "<div class= ''>"+ feature.properties.Description_si_disop + '</div> <br>'+
+            "<span class='fas fa-map-pin'></span> "+ feature.properties.Adress + '<br>'+
+            "<div class= 'telpop'>"+ feature.properties.Tel + '</div><br>'
+
+
 
             layer.bindPopup(mypopup);
 

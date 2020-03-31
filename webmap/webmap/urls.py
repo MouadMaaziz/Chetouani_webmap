@@ -10,7 +10,7 @@ urlpatterns = [
     path('', home_view,name='home'),
     path('home/', home_view,name='home'),
     path('webmap/', webmap_view,name='webmap'),
-    path('data/', GeoJSONLayerView.as_view(model= Projet, properties=('Nom','Description','Effectif_total','Nombre_Enseignant','Type','Superficie','link','Adress')),name='data'),
+    path('data/', GeoJSONLayerView.as_view(model= Projet, properties=('Nom','Département','Services','link','Adress','Tel','Description_si_disop')),name='data'),
     path('portfolio/', include('Blog_app.urls'),name='portfolio'),
     path('contact/', contact_view,name='contact'),
     path('about/', about_view,name='about'),

@@ -505,7 +505,11 @@ table {
   max-width: 100%;
   font-family: "Nunito Sans", sans-serif;
 }
-
+@@media screen and (max-width: 600px){
+  table {
+    font-size: x-small;
+  }
+}
 th, td {
   padding: 1.5rem 3rem;
   text-align: left;

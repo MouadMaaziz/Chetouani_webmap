@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from .models import Projet, About, Contact , Message
+from .models import Projet, About, Contact , Message, Services
 from Blog_app.models import Portfolio
 from django.core.mail import send_mail
 from django.conf import settings
@@ -12,8 +12,9 @@ def home_view(request,*args,**kwargs):
     portfolios = Portfolio.objects.all().order_by('-pk')
     contacts= Contact.objects.all()
     abouts= About.objects.all()
+    services= Services.objects.all()
     #return HttpResponse("hello Grey")
-    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'contact':contacts[0]})
+    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'contact':contacts[0],'serv':services})
 
 def webmap_view(request,*args,**kwargs):
     maps= Projet.objects.all()

@@ -5,21 +5,18 @@ from django.db.models import Manager as GeoManager
 # Create your models here.
 class Projet(models.Model):
 
-    type_choices=(
-    ("Public","Public"),
-    ("Privé","Privé")
-
-    )
 
     Nom= models.CharField(max_length=50)
     geom= models.PointField(srid=4326, blank= True,default=None)
-    Description= models.CharField(max_length=300,null=False,default="Not selected")
-    Type= models.CharField(max_length=200, choices= type_choices,null=False,default="Not selected")
-    Adress= models.CharField(max_length=200,default="Taroudant")
+    Département= models.CharField(max_length=300,null=False,default="",blank= True)
+    Services= models.CharField(max_length=200, null=False,default="",blank= True)
+    Description_si_disop= models.CharField(max_length=200, null=False,default="",blank= True)
+    Adress= models.CharField(max_length=200,default="",blank= True)
+    Tel= models.CharField(max_length=200,default="",blank= True)
     Latitude = models.FloatField(max_length=8,default=30)
     Longitude = models.FloatField(max_length=8,default=-8)
     img = models.ImageField(null=True)
-    link= models.URLField(null=True, blank=True)
+    link = models.URLField(null=True, blank=True,editable=False)
     object= GeoManager()
 
     def save(self, *args, **kwargs):
@@ -67,3 +64,11 @@ class Message(models.Model):
 
     def __str__(self):
         return self.Name
+
+class Services(models.Model):
+        Nom= models.CharField(max_length= 120)
+        Description= models.CharField(max_length= 520)
+        Icon= models.CharField(max_length= 50,default='fas fa-' )
+
+        def __str__(self):
+            return self.Nom

@@ -10,7 +10,7 @@ def portfolio_view(request,*arg,**kwargs):
     portfolios = Portfolio.objects.all().order_by('-pk') #list portfolio objects by primary key
     abouts= About.objects.all()
     contacts= Contact.objects.all()
-    paginator=Paginator(portfolios,4)
+    paginator=Paginator(portfolios,12)
     page_request_var= 'page'
     page=request.GET.get(page_request_var)
     try:

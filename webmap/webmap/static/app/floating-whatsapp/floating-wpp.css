@@ -4,6 +4,7 @@
     left: 15px;
     font-size: 14px;
     transition: bottom 0.2s;
+    z-index: 1;
 }
 
 .floating-wpp .floating-wpp-button {
