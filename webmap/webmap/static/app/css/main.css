@@ -1000,7 +1000,7 @@
          width: 90%;
     }
      .header-video .lead{
-         top:55%;
+         top:65%;
          left:5%;
          font-size:1rem;
          line-height:1.4rem;
@@ -1169,7 +1169,7 @@
 /*--------------- * small mobile device */
  @media screen and (max-width: 375px){
      #intro {
-         
+
 	       height: 35%;
     }
      .header-video img{
@@ -1197,7 +1197,7 @@
     }
      .header-video .lead{
          font-family:"poppins-light",serif;
-         top:48%;
+         top:56%;
          left:8%;
          font-size:60%;
          line-height:1.4rem;
