@@ -1169,8 +1169,8 @@
 /*--------------- * small mobile device */
  @media screen and (max-width: 375px){
      #intro {
-         min-height:50%;
-	 height: 35%;
+         
+	       height: 35%;
     }
      .header-video img{
 
