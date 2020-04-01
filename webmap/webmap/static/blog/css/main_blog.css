@@ -76,7 +76,7 @@ html, body {
 }
 
 body {
-  background: #111860;
+  background: #292929;  
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.8rem;
   font-style: normal;
@@ -4346,7 +4346,8 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
   margin-top: 6rem;
 }
 .about-photo{
-  margin-left: 0%;
+  margin-left: 0%;	  
+  widht: 100%;	
   margin-bottom: 5rem;
 }
 /*# sourceMappingURL=main.css.map */

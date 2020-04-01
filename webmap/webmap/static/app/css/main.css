@@ -983,7 +983,7 @@
 /*---------------------------- * large mobile device */
  @media screen and (max-width: 600px){
      #intro {
-         height:50%;
+         height:42%;
     }
      .header-video h1 {
          top:40%;
@@ -1170,6 +1170,7 @@
  @media screen and (max-width: 375px){
      #intro {
          min-height:50%;
+	 height: 35%;
     }
      .header-video img{
 

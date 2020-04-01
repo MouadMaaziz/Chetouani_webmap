@@ -314,8 +314,8 @@
      border-radius: 0px;
      padding-right: 15px;
      pading-left: 15px;
-     font-family: 'Roboto';
-     font-weight: bold;
+     font-family: 'Roboto', sans-serif;
+     font-weight: inherit;
      text-decoration:none;
      text-transform:uppercase;
      font-size:18px;

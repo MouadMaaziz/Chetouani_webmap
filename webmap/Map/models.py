@@ -16,7 +16,7 @@ class Projet(models.Model):
     Latitude = models.FloatField(max_length=8,default=30)
     Longitude = models.FloatField(max_length=8,default=-8)
     img = models.ImageField(null=True)
-    link = models.URLField(null=True, blank=True,editable=False)
+    link = models.URLField(null=True, blank=True)
     object= GeoManager()
 
     def save(self, *args, **kwargs):
