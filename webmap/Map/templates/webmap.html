@@ -47,7 +47,7 @@
 
 <!-- Live location control -->
 <link rel="stylesheet" href="{% static 'plugins/locatecontrol/src/L.Control.Locate.scss'%}" />
-<script type="text/javascript" src="{% static 'plugins/locatecontrol/src/L.Control.Locate.js'%}"></script>
+
 <!-- Geocoding control -->
 
 <style>
@@ -95,8 +95,9 @@
 }
 
 .leaflet-popup-content-wrapper {
-  width: 250px;
+  width: 200px;
   text-align: center;
+  height: 240px;
 }
 
 .leaflet-popup-content-wrapper .leaflet-popup-content {
@@ -179,6 +180,10 @@
     margin: 5px 19px 1px 19px;
     line-height: 1.2;
 
+}
+.leaflet-touch .leaflet-control-layers-toggle {
+    width: 34px;
+    height: 34px;
 }
 </style>
 <!-- Custom styles for this template -->
@@ -292,7 +297,7 @@
        //  };
 
     L.control.ruler(options).addTo(map);
-    L.control.locate().addTo(map);
+
 
     // L.easyPrint({
     // title: 'My awesome print button',
