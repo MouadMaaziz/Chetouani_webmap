@@ -28,7 +28,21 @@ class Projet(models.Model):
          self.link  =self.img.url   #make a way to the media folder where images are being saved
          super(Projet, self).save(*args, **kwargs)
 
+class Contact_page(models.Model):
 
+    Whatsp = models.TextField(max_length=300)
+    demande_nom = models.TextField(max_length=800)
+    demande_email = models.TextField(max_length=800)
+    demande_message = models.TextField(max_length=800)
+    section_adress= models.TextField(null=True, blank= True)
+    contenu_adress= models.TextField(null=True, blank= True)
+    section_phone= models.TextField(null=True, blank= True)
+    contenu_phone= models.TextField(null=True, blank= True)
+    section_email= models.TextField(null=True, blank= True)
+    contenu_email= models.TextField(null=True, blank= True)
+
+    def __str__(self):
+        return self.demande_nom
 
 class About(models.Model):
     Photo_Personel= models.ImageField(null=True)
@@ -43,10 +57,13 @@ class About(models.Model):
     def __str__(self):
         return self.Introduction
 
-class Contact(models.Model):
-    Adress= models.TextField(null=True, blank= True)
-    Phone = models.TextField(max_length=25, blank= True)
-    Email = models.TextField(max_length=30, blank= True)
+class Pied_de_page(models.Model):
+    section_1= models.TextField(null=True, blank= True)
+    contenu_1= models.TextField(null=True, blank= True)
+    section_2= models.TextField(null=True, blank= True)
+    contenu_2= models.TextField(null=True, blank= True)
+    section_3= models.TextField(null=True, blank= True)
+    contenu_3= models.TextField(null=True, blank= True)
     facebookPage= models.TextField(max_length=80, null=True, blank= True)
     instaProfile= models.TextField(max_length=80, null=True , blank= True)
     linkedIn= models.TextField(max_length=80, null=True , blank= True)
@@ -54,7 +71,7 @@ class Contact(models.Model):
 
 
     def __str__(self):
-        return self.Adress
+        return self.section_1
 
 
 class Message(models.Model):

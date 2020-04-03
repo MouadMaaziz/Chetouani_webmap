@@ -13,32 +13,30 @@
 
               <div class="col-lg-5 mb-5">
 
-                  <h4>A propos de Nous</h4>
+                  <h4>{{contact.section_1}}</h4>
 
-                  <p class='footer-txt'>{{about.Introduction}}</p>
+                  <p class='footer-txt'>{{contact.contenu_1}}</p>
 
               </div> <!-- end s-footer__about -->
 
 
                 <div class="col-lg-3 mb-5 text-center">
 
-                      <h4>Ou nous trouver?</h4>
+                      <h4>{{contact.section_2}}</h4>
 
                       <p class='footer-txt'>
-                      {{contact.Adress}}
+                      {{contact.contenu_2}}
                       </p>
 
                 </div>
 
                 <div class="col-lg-4 mb-5 text-center">
 
-                      <h4>Infos de contact</h4>
+                      <h4>{{contact.section_3}}</h4>
 
-                      <p class='footer-txt'>{{contact.Email}}
+                      <p class='footer-txt'>{{contact.contenu_3}}
                       </p>
-                      <br>
-                      <p class='footer-txt'>{{contact.Phone}}
-                      </p>
+
 
                 </div>
 
@@ -94,7 +92,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script type="text/javascript">
         $(function () {
             $('#myButton').floatingWhatsApp({
-                phone: '{{contact.Phone}}',
+                phone: '{{contpg.Whatsp}}',
                 popupMessage: 'Bonjour! En quoi nous pouvons vous être utiles ?',
                 message: "Bonjour! J'aimerai vous consulter sur ",
                 showPopup: true,

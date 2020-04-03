@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Projet, About, Contact , Message, Services
+from .models import Projet, About, Pied_de_page , Message, Services, Contact_page
 from leaflet.admin import LeafletGeoAdmin
 # Register your models here.
 
@@ -10,6 +10,7 @@ class ProjetAdmin(LeafletGeoAdmin):
 
 admin.site.register(Projet,ProjetAdmin)
 admin.site.register(About)
-admin.site.register(Contact)
+admin.site.register(Pied_de_page)
 admin.site.register(Message)
 admin.site.register(Services)
+admin.site.register(Contact_page)

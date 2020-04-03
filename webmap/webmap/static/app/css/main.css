@@ -1180,7 +1180,7 @@
     }
      .header-video h1 {
          font-family:"lora-bold-italic";
-         top:32%;
+         top:45%;
          left:0%;
          font-size: 130%;
          line-height: 1.071;
@@ -1188,7 +1188,7 @@
     }
      .header-video .intro-position {
          font-family:"poppins-medium",serif;
-         top:22%;
+         top:30%;
          left:0%;
          font-size: 60%;
          line-height: 1.4rem;
@@ -1197,7 +1197,7 @@
     }
      .header-video .lead{
          font-family:"poppins-light",serif;
-         top:56%;
+         top:70%;
          left:8%;
          font-size:60%;
          line-height:1.4rem;

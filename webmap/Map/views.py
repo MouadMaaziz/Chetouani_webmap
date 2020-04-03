@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from .models import Projet, About, Contact , Message, Services
+from .models import Projet, About, Pied_de_page , Message, Services, Contact_page
 from Blog_app.models import Portfolio
 from django.core.mail import send_mail
 from django.conf import settings
@@ -10,7 +10,7 @@ from .forms import ContactForm
 def home_view(request,*args,**kwargs):
     abouts= About.objects.all()
     portfolios = Portfolio.objects.all().order_by('-pk')
-    contacts= Contact.objects.all()
+    contacts= Pied_de_page.objects.all()
     abouts= About.objects.all()
     services= Services.objects.all()
     #return HttpResponse("hello Grey")
@@ -24,7 +24,7 @@ def webmap_view(request,*args,**kwargs):
 def base_view(request,*args,**kwargs):
     #return HttpResponse("hello Grey")
     abouts= About.objects.all()
-    contacts= Contact.objects.all()
+    contacts= Pied_de_page.objects.all()
     return render(request,"base.html" ,{'about':abouts[0],'contact':contacts[0]})
 
 
@@ -36,15 +36,15 @@ def contact_view(request,*arg,**kwargs):
         Message.objects.create(Name= name, Email=email, message=message)
 
     abouts= About.objects.all()
-    contacts= Contact.objects.all()
+    contacts= Pied_de_page.objects.all()
     abouts= About.objects.all()
-    contacts= Contact.objects.all()
-    return render(request,"contact.html",{'about':abouts[0],'contact':contacts[0]},)
+    contenu= Contact_page.objects.all()
+    return render(request,"contact.html",{'about':abouts[0],'contact':contacts[0],'contpg':contenu[0]})
 
 
 def about_view(request,*arg,**kwargs):
     abouts= About.objects.all()
-    contacts= Contact.objects.all()
+    contacts= Pied_de_page.objects.all()
     return render(request,"about.html",{'about':abouts[0],'contact':contacts[0]})
 
 

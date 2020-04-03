@@ -18,14 +18,14 @@
     					Envoyez-nous un message
     				</span>
             {% csrf_token %}
-    				<label class="label-input100" for="first-name">dit nous votre nom *</label>
+    				<label class="label-input100" for="first-name">{{contpg.demande_nom}}</label>
     				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
     					<input id="first-name" class="input100" type="text" name="txtname" placeholder="Nom et Prénom">
     					<span class="focus-input100"></span>
     				</div>
 
 
-    				<label class="label-input100" for="email">Entrez votre email *</label>
+    				<label class="label-input100" for="email">{{contpg.demande_email}}</label>
     				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
     					<input id="email" class="input100" type="text" name="txtmail" placeholder=" example@email.com">
     					<span class="focus-input100"></span>
@@ -33,7 +33,7 @@
 
 
 
-    				<label class="label-input100" for="message">Message *</label>
+    				<label class="label-input100" for="message">{{contpg.demande_message}}</label>
     				<div class="wrap-input100 validate-input" data-validate = "Message is required">
     					<textarea id="message" class="input100" name="txtmessage" placeholder="Tappez un  message"></textarea>
     					<span class="focus-input100"></span>
@@ -54,11 +54,11 @@
 
     					<div class="flex-col size2">
     						<span class="txt1 p-b-20">
-    							Addresse
+    							{{contpg.section_adress}}
     						</span>
 
     						<span class="txt2">
-    							{{contact.Adress}}
+    							{{contpg.contenu_adress}}
     						</span>
     					</div>
     				</div>
@@ -70,11 +70,11 @@
 
     					<div class="flex-col size2">
     						<span class="txt1 p-b-20">
-    							Téléphone
+    							{{contpg.section_phone}}
     						</span>
 
     						<span class="txt3">
-    							{{contact.Phone}}
+    							{{contpg.contenu_phone}}
     						</span>
     					</div>
     				</div>
@@ -86,11 +86,11 @@
 
     					<div class="flex-col size2">
     						<span class="txt1 p-b-20">
-    							Besoin de support ?
+    							{{contpg.section_email}}
     						</span>
 
     						<span class="txt3">
-    							{{contact.Email}}
+    							{{contpg.contenu_email}}
     						</span>
     					</div>
     				</div>

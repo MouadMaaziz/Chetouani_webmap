@@ -26,7 +26,7 @@ SECRET_KEY = '=_j#^9l4f6b^)-07)057&mcgs#tbbnyu^!p7f%52+#l426b_b$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.79.159.251','www.chetopgeo.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -136,6 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT= os.path.join(BASE_DIR,'webmap/static')
 
 STATIC_URL = '/static/'
@@ -147,11 +148,11 @@ CKEDITOR_UPLOAD_PATH="media"
 
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (30.478,-8.86),
-    'DEFAULT_ZOOM':7,
+    'DEFAULT_ZOOM':6,
     'MIN_ZOOM':5,
-    'SPATIAL_EXTENT':(-1,18,-18,38),
-    'ATTRIBUTION_PREFIX':'Inpired by MAAZIZ, CHETOUANI TOPOGRAPHIE & GEOMATIQUE',
-    'TILES': [('Routes', 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', { }),
+    'SPATIAL_EXTENT':(-1,18,-18,43),
+    'ATTRIBUTION_PREFIX':'CTG',
+    'TILES': [('Routes', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { }),
          ('Satellite','https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {'attribution': 'Tiles &copy;','maxZoom': 17}),
          ('Villes', 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', { }),
           ],
