@@ -166,7 +166,7 @@
 .leaflet-retina .leaflet-control-layers-toggle {
 
     background-image: url("/static/app/img/layers.png");
-    background-size: 26px 26px;
+    background-size: 25px 25px;
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
 
     background: white;
@@ -182,8 +182,8 @@
 
 }
 .leaflet-touch .leaflet-control-layers-toggle {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 }
 </style>
 <!-- Custom styles for this template -->
@@ -286,23 +286,6 @@
        //    position: 'topleft',
        //
        //  };
-
-       map.locate({setView: true, maxZoom: 16});
-     function onLocationFound(e) {
-         var radius = e.accuracy;
-
-         L.marker(e.latlng).addTo(map)
-             .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
-         L.circle(e.latlng, radius).addTo(map);
-     }
-
-     map.on('locationfound', onLocationFound);
-     function onLocationError(e) {
-         alert(e.message);
-     }
-
-     map.on('locationerror', onLocationError);
 
 
     // L.easyPrint({
