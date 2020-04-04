@@ -22,11 +22,11 @@ class Webmap(models.Model):
     def save(self, *args, **kwargs):
          self.Latitude  = self.geom.y
          self.Longitude = self.geom.x
-         super(Projet, self).save(*args, **kwargs)
+         super(Webmap, self).save(*args, **kwargs)
 
     def save(self, *args, **kwargs):
          self.link  =self.img.url   #make a way to the media folder where images are being saved
-         super(Projet, self).save(*args, **kwargs)
+         super(Webmap, self).save(*args, **kwargs)
 
 class Contact_page(models.Model):
 
