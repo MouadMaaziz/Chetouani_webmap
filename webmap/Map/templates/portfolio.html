@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title %}{{ block.super }} | Blogs {% endblock %}
+{% block title %}{{ block.super }} {{tete.Actualite}} {% endblock %}
 {{% block body %}
     <!-- CSS
     ================================================== -->
@@ -43,7 +43,7 @@
                                         <img class="avatar" src= "{{about.Photo_Personel.url}}" alt="">
                                     </a>
                                     <ul class="entry__meta">
-                                        <li><a href="#0">{{port.pub}}</a></li>
+                                        <li><a href="#0">{{port.auteur}}</a></li>
                                         <li>{{port.Date_cus}}</li>
                                     </ul>
                                 </div>

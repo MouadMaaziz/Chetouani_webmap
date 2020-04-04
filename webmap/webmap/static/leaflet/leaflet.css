@@ -352,8 +352,8 @@
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
-	width: 44px;
-	height: 44px;
+	width: 34px;
+	height: 34px;
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
@@ -466,7 +466,7 @@
 .leaflet-popup-content-wrapper {
 	padding: 1px;
 	text-align: left;
-	border-radius: 12px;
+	border-radius: 10px;
 	}
 .leaflet-popup-content {
 	margin: 13px 19px;

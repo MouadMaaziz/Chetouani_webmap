@@ -97,7 +97,7 @@
 .leaflet-popup-content-wrapper {
   width: 200px;
   text-align: center;
-  height: 240px;
+
 }
 
 .leaflet-popup-content-wrapper .leaflet-popup-content {
@@ -155,7 +155,7 @@
   }
 .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
 
-      border: 2px solid rgb(17, 24, 96);
+      border: 1px solid rgb(128, 128, 128);
       background-clip: padding-box;
   }
 .leaflet-control-layers-toggle {
@@ -181,10 +181,7 @@
     line-height: 1.2;
 
 }
-.leaflet-touch .leaflet-control-layers-toggle {
-    width: 30px;
-    height: 30px;
-}
+
 </style>
 <!-- Custom styles for this template -->
 <link href="jumbotron.css" rel="stylesheet">
@@ -255,9 +252,7 @@
 
 
         // Les extensions et les plugins
-        var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '&copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-        });
+
 
 
         // var options = {

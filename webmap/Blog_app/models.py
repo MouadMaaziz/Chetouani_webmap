@@ -7,7 +7,7 @@ from  ckeditor_uploader.fields import RichTextUploadingField
 
 class Portfolio(models.Model):
     Titre = models.CharField(max_length=80)
-    pub = models.CharField(max_length=40, null=True, blank=True,default='M.Y.CHETOUANI')
+    auteur = models.CharField(max_length=40, null=True, blank=True,default='M.Y.CHETOUANI')
     Contenu = RichTextUploadingField()
     link = models.URLField(null=True, blank=True)
     Photo = models.ImageField(upload_to='')

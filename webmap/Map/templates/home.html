@@ -3,7 +3,7 @@
 
 
 
-{% block title %}{{ block.super }} | Accueil {% endblock %}
+{% block title %}{{ block.super }} {{tete.Accueil}} {% endblock %}
 {% block body %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,11 +29,11 @@
         <div class="row">
             <div class="col-twelve">
                 <p class="intro-position">
-                    <span>We are here to create a lasting relationship with you</span>
+                    <span>{{Accueil.video_phrase1}}</span>
                 </p>
-                <h1>CHETOUANI TOPOGRAPHIE & GEOMATIQUE</h1>
+                <h1>{{Accueil.video_titre}}</h1>
                 <p class="lead">
-                    <span>GEOMATIQUE - AMENAGEMENT - EXPERTISE FONCIERE </span>
+                    <span>{{Accueil.video_phrase2}} </span>
                 </p>
         </div>
         </div>
@@ -45,9 +45,9 @@
 <div class="resume-intro">
 
     <p class="resume-content">
-    {{about.Introduction}}
+    {{Accueil.Intro}}
     </p><br>
-  <div class="fb-page" data-href="https://www.facebook.com/chetopgeo/" data-tabs=""data-width="350" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chetopgeo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chetopgeo/">Sté Chetouani Topographie &amp; Geomatique</a></blockquote></div>
+  <div class="fb-page" data-href="{{contac.facebookPage}}" data-tabs=""data-width="350" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chetopgeo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chetopgeo/">Sté Chetouani Topographie &amp; Geomatique</a></blockquote></div>
 
 </div>
 <div class="separator">
@@ -57,7 +57,7 @@
 
 <section id="codehub-intro">
     <div class="codehub-intro ">
-        <h1>Nos prestations de service</h1>
+        <h1>{{Accueil.prestations_section}}</h1>
 
           <div class="codehub-content ">
             <div class="glide">
@@ -67,9 +67,9 @@
                   <li class="glide__slide">
                     <div class="codehub-section ">
 
-                   <span class="icon"><i class="{{s.Icon}}"></i> </span>
-                    <h1>{{s.Nom}}</h1>
-                    <p >{{s.Description}}</p>
+                   <span class="icon"><a href="{% url 'presdetails' s.id %}"> <i class="{{s.Icon}}"></i></a> </span>
+                    <h1><a href="{% url 'presdetails' s.id %}">{{s.Titre}}</a></h1>
+                    <p ><a href="{% url 'presdetails' s.id %}">{{s.Description}}</a></p>
 
                 </div></li>
                 {% endfor %}
@@ -117,7 +117,7 @@
 <section class="s-content">
 
     <div class="row entries-wrap wide">
-      <h1>Nos blogs recentes</h1>
+      <h1>{{Accueil.actualite_section}}</h1>
         <div class="entries">
           {% for port in list %}
             <article class="col-block">

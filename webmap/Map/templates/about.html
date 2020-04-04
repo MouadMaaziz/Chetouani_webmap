@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title %}{{ block.super }} | About {% endblock %}
+{% block title %}{{ block.super }} {{tete.A_propos}} {% endblock %}
 {{% block body %}
 
 
@@ -28,10 +28,10 @@
         <div class="row">
             <div class="col-twelve">
                 <p class="intro-position">
-                    <span>~Nos simples interets ~</span>
+                    <span>{{about.mini_phrase}}</span>
                 </p>
-                <h1>Nous sommes des <br>
-		 <span class="txt-type" data-wait="1000" data-words='["Topographes", "Géomaticiens", "Développeurs"]'></span>
+                <h1>{{about.Phrase_principale}} <br>
+		 <span class="txt-type" data-wait="1000" data-words='["{{about.mot_defilant_1}}", "{{about.mot_defilant_2}}", "{{about.mot_defilant_3}}"]'></span>
 		</h1>
         </div>
         </div>
@@ -51,13 +51,13 @@
 
     <div class="row">
         <div class="">
-            
+
             <img src="{{about.Photos_dentreprise.url}}"
                  srcset="{{about.Photos_dentreprise.url}} 2000w,
                          {{about.Photos_dentreprise.url}} 1000w,
                          {{about.Photos_dentreprise.url}} 500w"
                  sizes="(max-width: 2000px) 300vw, 2000px" alt="" class="about-photo">
-            
+
 
             <h2>Voila notre histoire</h2>
             <p>
