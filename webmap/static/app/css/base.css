@@ -322,6 +322,22 @@
      background:#000c;
 
 }
+@media screen and (max-width: 1430px){
+.navbar-wrapper .navbar{
+    position: absolute;
+    top: -2rem;
+    border: 0;
+    border-radius: 0px;
+    padding-right: 15px;
+    pading-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: inherit;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:15px;
+    background:#000c;
+    left: -5rem;
+}}
 
  @media screen and (max-width: 812px){
      .navbar-wrapper{

@@ -47,24 +47,17 @@
             {{about.Introduction | safe}}</p>
 
         </div>
+        <hr>
+    </div>
+    
+    <div class="col ">
+      <h4>Ou somme nous aujourd'hui ?</h4>
+      {% include 'webmap.html' %}
     </div>
 
     <div class="row">
         <div class="">
 
-            <img src="{{about.Photos_dentreprise.url}}"
-                 srcset="{{about.Photos_dentreprise.url}} 2000w,
-                         {{about.Photos_dentreprise.url}} 1000w,
-                         {{about.Photos_dentreprise.url}} 500w"
-                 sizes="(max-width: 2000px) 300vw, 2000px" alt="" class="about-photo">
-
-
-            <h2>{{about.histoire}}</h2>
-            <p>
-            {{about.notre_Histoire}}
-            </p>
-
-            <hr>
 
             <div class="row block-1-2 block-tab-full">
                 <div class="col-block">
@@ -91,10 +84,7 @@
 
         </div> <!-- s-content__main -->
     </div> <!-- end row -->
-    <div class="col ">
-      <h4>Ou somme nous aujourd'hui ?</h4>
-      {% include 'webmap.html' %}
-    </div>
+
 
 </section> <!-- end s-content -->
 

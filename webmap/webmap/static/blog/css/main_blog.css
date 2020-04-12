@@ -76,7 +76,7 @@ html, body {
 }
 
 body {
-  background: #292929;  
+  background: #292929;
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.8rem;
   font-style: normal;
@@ -565,6 +565,7 @@ form,
 .cl-custom-select {
   margin-left: 0%;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 
@@ -2955,7 +2956,7 @@ body.search-is-visible {
 }
 
 .s-content--top-padding {
-  padding-top: 16.2rem;
+  padding-top: 5rem;
 }
 
 .s-content__header {
@@ -2994,7 +2995,7 @@ body.search-is-visible {
   }
 
   .s-content--top-padding {
-    padding-top: 15rem;
+    padding-top: 6rem;
   }
 
   .s-content__main, .entry__main {
@@ -3041,7 +3042,7 @@ body.search-is-visible {
 
 @media only screen and (max-width:800px) {
   .s-content--top-padding {
-    padding-top: 13.8rem;
+    padding-top: 4rem;
   }
 
   .entry__main {
@@ -3064,7 +3065,7 @@ body.search-is-visible {
 
 @media only screen and (max-width:400px) {
   .s-content--top-padding {
-    padding-top: 12.6rem;
+    padding-top: 3rem;
   }
 
   .s-content__main, .entry__main {
@@ -4346,8 +4347,8 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
   margin-top: 6rem;
 }
 .about-photo{
-  margin-left: 0%;	  
-  widht: 100%;	
+  margin-left: 0%;
+  widht: 100%;
   margin-bottom: 5rem;
 }
 /*# sourceMappingURL=main.css.map */

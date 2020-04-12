@@ -2994,7 +2994,7 @@ body.search-is-visible {
   }
 
   .s-content--top-padding {
-    padding-top: 15rem;
+    padding-top: 6rem;
   }
 
   .s-content__main, .entry__main {
@@ -3041,7 +3041,7 @@ body.search-is-visible {
 
 @media only screen and (max-width:800px) {
   .s-content--top-padding {
-    padding-top: 13.8rem;
+    padding-top: 4rem;
   }
 
   .entry__main {
@@ -3064,7 +3064,7 @@ body.search-is-visible {
 
 @media only screen and (max-width:400px) {
   .s-content--top-padding {
-    padding-top: 12.6rem;
+    padding-top: 3rem;
   }
 
   .s-content__main, .entry__main {

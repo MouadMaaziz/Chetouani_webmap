@@ -2,7 +2,7 @@ body{
 	background:#100e17;
 }
 #intro {
-        
+
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -241,8 +241,8 @@ body{
 }
 
 .intro-content .intro-position span{
-	font-family: "poppins-medium", serif;
-	font-size:60%;
+	font-family: "Droid Arabic Kufi", serif;
+	font-size:100%;
 	line-height: 1.4rem;
 }
 #instafeed{

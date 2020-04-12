@@ -566,7 +566,7 @@ textarea {
   }
 
   [class*="col-"] {
-    padding: 20px;
+    padding: 2%;
     margin: auto;
   }
 
@@ -616,9 +616,9 @@ textarea {
     width: 100% !important;
     float: none !important;
     clear: both !important;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-right: 0;
-    padding: 7%;
+    padding: 1%;
   }
 
   [class*="col-"] + [class*="col-"].end {
@@ -644,7 +644,7 @@ textarea {
     width: 100% !important;
     float: none !important;
     clear: both !important;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-right: 0;
     padding: 0;
   }

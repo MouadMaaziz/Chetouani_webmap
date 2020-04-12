@@ -26,7 +26,7 @@ SECRET_KEY = '=_j#^9l4f6b^)-07)057&mcgs#tbbnyu^!p7f%52+#l426b_b$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.79.159.251','chetopgeo.com']
+ALLOWED_HOSTS = ['178.79.159.251']
 
 
 # Application definition
@@ -147,10 +147,10 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 CKEDITOR_UPLOAD_PATH="media"
 
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (30.478,-8.86),
-    'DEFAULT_ZOOM':6,
+    'DEFAULT_CENTER': (29,-8.86),
+    'DEFAULT_ZOOM':4,
     'MIN_ZOOM':5,
-    'SPATIAL_EXTENT':(0,18,-19,43),
+    'SPATIAL_EXTENT':(0,18,-21,43),
     'ATTRIBUTION_PREFIX':'CTG',
     'TILES': [('Routes', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { }),
          ('Satellite','https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {'attribution': 'Tiles &copy;','maxZoom': 17}),
