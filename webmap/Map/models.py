@@ -69,10 +69,15 @@ class About(models.Model):
     Photos_dentreprise= models.ImageField(null=True)
     Info_titre= models.CharField(max_length=1000,default='A propos de Ste.Chetouani.')
     Introduction = RichTextUploadingField(max_length=1000)
+    histoire=models.CharField(max_length=300,default='voila notre histoire')
     notre_Histoire = models.TextField(max_length=1000)
+    de_nous= models.CharField(max_length=300,default='qui somme nous ?')
     qui_Somme_Nous = models.TextField(max_length=1000)
+    valeurs= models.CharField(max_length=300,default='nos valeurs')
     nos_Valeurs = models.TextField(max_length=1000)
+    missions= models.CharField(max_length=300,default='nos missions')
     nos_Missions = models.TextField(max_length=1000)
+    vision= models.CharField(max_length=300,default='notre vision')
     notre_Vision = models.TextField(max_length=1000)
     def __str__(self):
         return self.Introduction
