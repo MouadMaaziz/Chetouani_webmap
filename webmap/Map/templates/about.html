@@ -41,7 +41,7 @@
 
     <div class="row narrow">
         <div class="col-full s-content__header">
-            <h1 class="display-1 display-1--with-line-sep">{{about.Info_titre}} </h1>
+            <h3 >{{about.Info_titre}} </h3>
             <p class="lead">
 
             {{about.Introduction | safe}}</p>
@@ -49,9 +49,9 @@
         </div>
         <hr>
     </div>
-    
+
     <div class="col ">
-      <h4>Ou somme nous aujourd'hui ?</h4>
+      <h4>{{about.Titre_carte}}</h4>
       {% include 'webmap.html' %}
     </div>
 
@@ -62,22 +62,22 @@
             <div class="row block-1-2 block-tab-full">
                 <div class="col-block">
                     <h4 class="quarter-top-margin">{{about.de_nous}}</h4>
-                    <p>{{about.qui_Somme_Nous}}</p>
+                    <p>{{about.qui_Somme_Nous | safe}}</p>
                 </div>
 
                 <div class="col-block">
                     <h4 class="quarter-top-margin">{{about.missions}}</h4>
-                    <p>{{about.nos_Missions}}</p>
+                    <p>{{about.nos_Missions | safe}}</p>
                 </div>
 
                 <div class="col-block">
                     <h4 class="quarter-top-margin">{{about.vision}}</h4>
-                    <p>{{about.notre_Vision}}</p>
+                    <p>{{about.notre_Vision | safe}}</p>
                 </div>
 
                 <div class="col-block">
-                    <h4 class="quarter-top-margin">Nos  Valeurs.</h4>
-                    <p>{{about.nos_Valeurs}}</p>
+                    <h4 class="quarter-top-margin">{{about.valeurs}}</h4>
+                    <p>{{about.nos_Valeurs | safe}}</p>
                 </div>
 
             </div>
