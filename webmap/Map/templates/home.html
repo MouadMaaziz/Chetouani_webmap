@@ -47,7 +47,7 @@
     <p class="resume-content">
     {{Accueil.Intro}}
     </p><br>
-  <div class="fb-page" data-href="{{contact.facebookPage}}" data-tabs=""data-width="350" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chetopgeo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chetopgeo/">Sté Chetouani Topographie &amp; Geomatique</a></blockquote></div>
+  <div class="fb-page" data-href="{{contact.fac}}" data-tabs=""data-width="350" data-height="" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/chetopgeo/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/chetopgeo/">Sté Chetouani Topographie &amp; Geomatique</a></blockquote></div>
 
 </div>
 <div class="separator">
@@ -69,34 +69,11 @@
 
                    <span class="icon"><a href="{% url 'presdetails' s.id %}"> <i class="{{s.Icon}}"></i></a> </span>
                     <h1><a href="{% url 'presdetails' s.id %}">{{s.Titre}}</a></h1>
-                    <p ><a href="{% url 'presdetails' s.id %}">{{s.Description}}</a></p>
+                    <a href="{% url 'presdetails' s.id %}">{{s.Description}}</a>
 
                 </div></li>
                 {% endfor %}
-<!--                 <li class="glide__slide">
-                <div class="codehub-section">
 
-                  <span class="icon"><i class="fas fa-drafting-compass"></i> </span>
-                  <h1>Topograpie</h1>
-                  <p>Topographie, travaux-divers en 3D</p>
-
-              </div></li>
-              <li class="glide__slide">
-                <div class="codehub-section ">
-
-                  <span class="icon"><i class="fas fa-layer-group"></i> </span>
-                  <h1>Geomatique</h1>
-                  <p>Geomatique: SIG et teledetection</p>
-
-              </div></li>
-              <li class="glide__slide">
-                <div class="codehub-section  ">
-
-                    <span class="icon"><i class="fas fa-chalkboard-teacher"></i> </span>
-                    <h1>Formations</h1>
-                    <p>Formations et conseils</p>
-
-                </div></li> -->
             </ul>
           </div>
           <div class="glide__arrows" data-glide-el="controls">

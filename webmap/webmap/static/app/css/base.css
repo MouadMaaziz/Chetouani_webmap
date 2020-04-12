@@ -342,7 +342,7 @@
  @media screen and (max-width: 812px){
      .navbar-wrapper{
          position: fixed;
-         margin-left: 0%;
+         margin-left: 15%;
          margin-right:0%;
          top : 25px;
          right: 0px;

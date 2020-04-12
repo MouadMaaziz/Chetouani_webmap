@@ -25,7 +25,7 @@ SECRET_KEY = '=_j#^9l4f6b^)-07)057&mcgs#tbbnyu^!p7f%52+#l426b_b$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+''' 178.79.159.251'''
 ALLOWED_HOSTS = ['178.79.159.251']
 
 
@@ -136,6 +136,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+'''
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "webmap/static"),
+
+]'''
 
 STATIC_ROOT= os.path.join(BASE_DIR,'webmap/static/')
 

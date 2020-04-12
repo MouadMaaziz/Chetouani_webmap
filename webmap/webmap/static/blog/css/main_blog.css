@@ -565,7 +565,7 @@ form,
 .cl-custom-select {
   margin-left: 0%;
   margin-bottom: 1rem;
-  text-align: justify;
+
 }
 
 
@@ -4351,4 +4351,5 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
   widht: 100%;
   margin-bottom: 5rem;
 }
+
 /*# sourceMappingURL=main.css.map */

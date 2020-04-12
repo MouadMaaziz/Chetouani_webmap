@@ -6,6 +6,9 @@
 
 
 <link rel="stylesheet" href="{% static 'app/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'app/glide/glide.core.min.css' %}">
+<link rel="stylesheet" href="{% static 'app/glide/glide.theme.min.css' %}">
+
 <style>
 #intro {
     background:#100e17 url("{{about.Photos_ArrierePlan.url}}") no-repeat ;
@@ -55,7 +58,7 @@
       {% include 'webmap.html' %}
     </div>
 
-    <div class="row">
+<div class="row">
         <div class="">
 
 
@@ -82,11 +85,36 @@
 
             </div>
 
-        </div> <!-- s-content__main -->
-    </div> <!-- end row -->
+        </div>
+
+
+</div>
+
+    <hr>
 
 
 </section> <!-- end s-content -->
 
+<script src="{% static 'app/glide/glide.min.js' %}"></script>
+<script>
+  const config= {
+    type: 'carousel',
+    perView: 3,
+
+    breakpoints: {
+      1024:{
+        perView: 2
+      },
+      600: {
+        perView: 2
+      }
+    },
+    peek: {
+    before: 20,
+    after: 50
+  }
+  };
+  new Glide('.glide', config).mount()
+</script>
 
 {% endblock %}
