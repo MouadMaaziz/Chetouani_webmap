@@ -50,7 +50,7 @@ class Accueil_page(models.Model):
     video_phrase1 = models.CharField(max_length=200,default='WE ARE HERE TO CREATE A LASTING RELATIONSHIP WITH YOU')
     video_titre = models.CharField(max_length=200,default='STE CHETOUANI TOPOGRAPHIE & GEOMATIQUE')
     video_phrase2 = models.CharField(max_length=200,default='GEOMATIQUE- AMENAGEMENT- EXPERTISE FINANCIER')
-    Intro = models.TextField(max_length=800)
+    Intro = models.TextField(max_length=1000)
     prestations_section= models.CharField(max_length=200,default='Nos prestations du service')
     actualite_section= models.CharField(max_length=200,default='Nos actualites')
     def __str__(self):
@@ -67,13 +67,13 @@ class About(models.Model):
     Photo_Personel= models.ImageField(null=True)
     Photos_ArrierePlan= models.ImageField(null=True)
     Photos_dentreprise= models.ImageField(null=True)
-    Info_titre= models.CharField(max_length=300,default='A propos de Ste.Chetouani.')
-    Introduction = models.TextField(max_length=300)
-    notre_Histoire = models.TextField(max_length=800)
-    qui_Somme_Nous = models.TextField(max_length=300)
-    nos_Valeurs = models.TextField(max_length=300)
-    nos_Missions = models.TextField(max_length=300)
-    notre_Vision = models.TextField(max_length=300)
+    Info_titre= models.CharField(max_length=1000,default='A propos de Ste.Chetouani.')
+    Introduction = RichTextUploadingField(max_length=1000)
+    notre_Histoire = models.TextField(max_length=1000)
+    qui_Somme_Nous = models.TextField(max_length=1000)
+    nos_Valeurs = models.TextField(max_length=1000)
+    nos_Missions = models.TextField(max_length=1000)
+    notre_Vision = models.TextField(max_length=1000)
     def __str__(self):
         return self.Introduction
 
@@ -116,7 +116,7 @@ class Message(models.Model):
 
 class Prestations_page(models.Model):
         Titre = models.CharField(max_length=80)
-        Description= models.TextField(max_length= 520)
+        Description= models.TextField(max_length= 1020)
         Icon= models.CharField(max_length= 50,default='fas fa-' )
         Contenu = RichTextUploadingField()
         link = models.URLField(null=True, blank=True)
