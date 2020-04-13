@@ -4351,5 +4351,7 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
   widht: 100%;
   margin-bottom: 5rem;
 }
-
+.imgblg{
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

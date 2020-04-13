@@ -142,7 +142,7 @@ STATICFILES_DIRS = [
 
 ]
 '''
-STATIC_ROOT= os.path.join(BASE_DIR,'webmap/static/')
+STATIC_ROOT= os.path.join(BASE_DIR,'webmap/static/') # add webmap/static/ for production
 
 STATIC_URL = '/static/'
 

@@ -26,7 +26,7 @@
 
             <div class="col-full s-content__header">
                 <div class="entry__post-thumb">
-                  <p>
+                  <p class="imgblg">
                     <img src="{{blog.Photo.url}}"
                          srcset="{{blog.Photo.url}} 2000w,
                                  {{blog.Photo.url}} 1000w,
@@ -57,7 +57,7 @@
             <div class="col-full entry__main">
 
 
-                <div class="entry__author">
+            <!--        <div class="entry__author">
                     <img src="{{about.Photo_Personel.url}}" alt="">
 
                     <div class="entry__author-about">
@@ -68,11 +68,11 @@
 
                         <div class="entry__author-desc">
                             <p>
-                            {{about.qui_Somme_Nous}}
+                            {{about.qui_Somme_Nous | safe}}
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div> <!-- s-entry__main -->
 
