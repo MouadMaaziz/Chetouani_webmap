@@ -155,7 +155,7 @@ LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (29,-8.86),
     'DEFAULT_ZOOM':4,
     'MIN_ZOOM':5,
-    'SPATIAL_EXTENT':(0,18,-21,43),
+    'SPATIAL_EXTENT':(0,18,-21,46),
     'ATTRIBUTION_PREFIX':'CTG',
     'TILES': [('Routes', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { }),
          ('Satellite','https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {'attribution': 'Tiles &copy;','maxZoom': 17}),
