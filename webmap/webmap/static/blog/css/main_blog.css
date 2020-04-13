@@ -4360,5 +4360,12 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
     font-size: 2.6rem;
 
 }
+@media only screen and (max-width:600px) {
+  .pres{
+      font-family: "Libre Baskerville", serif;
+      font-size: 2.1rem;
+
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
