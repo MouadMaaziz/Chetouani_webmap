@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Webmap, About, Pied_de_page , Message, Prestations_page, Contact_page, Tete_de_page, Accueil_page
+from .models import Webmap, About, Pied_de_page , Message, Prestations_page, Contact_page, Tete_de_page, Accueil_page, Partenairs
 from leaflet.admin import LeafletGeoAdmin
 # Register your models here.
 
@@ -16,3 +16,4 @@ admin.site.register(Prestations_page)
 admin.site.register(Contact_page)
 admin.site.register(Tete_de_page)
 admin.site.register(Accueil_page)
+admin.site.register(Partenairs)

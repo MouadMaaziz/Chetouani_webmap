@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin-top: 0rem;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   font-family: "Libre Baskerville", serif;
 
 }
@@ -128,7 +128,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 @media only screen and (max-width:600px) {
   h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     margin-top: 0.1rem;
-    margin-bottom: 1rem
+    margin-bottom: 2rem
   }
 
 }
@@ -3536,7 +3536,7 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
   }
 
   footer .row {
-    max-width: 550px;
+    width: auto;
   }
 
   footer [class*="col-"] {

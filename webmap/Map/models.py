@@ -117,6 +117,14 @@ class Message(models.Model):
     def __str__(self):
         return self.Name
 
+class Partenairs(models.Model):
+    Nom= models.CharField(max_length= 120)
+    Image= models.ImageField(null=True)
+    Lien= models.CharField(max_length= 520)
+
+    def __str__(self):
+        return self.Nom
+
 class Prestations_page(models.Model):
         Titre = models.CharField(max_length=80)
         Description= models.TextField(max_length= 1020)
