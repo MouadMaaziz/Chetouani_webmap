@@ -69,7 +69,52 @@
 }
 .part{
 text-align: center;
-font-size: small
+font-size: small;
+width: inherit;
+margin-left: 8%;
+}
+@media only screen and (min-width:601px) {
+  .part{
+    margin-left: 80%;
+  }
+}
+@media only screen and (min-width:664px) {
+  .part{
+    margin-left: 70%;
+  }
+}
+@media only screen and (min-width:715px) {
+  .part{
+    margin-left: 50%;
+  }
+}
+@media only screen and (min-width:1024px) {
+  .part{
+    margin-left: 40%;
+  }
+}
+@media only screen and (min-width:1224px) {
+  .part{
+    margin-left: 30%;
+  }
+}
+@media only screen and (min-width:1361px) {
+  .part{
+    margin-left: 20%;
+  }
+}
+@media only screen and (min-width:1524px) {
+  .part{
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width:1634px) {
+  .part{
+    margin-left: 5%;
+  }
+}
+.info{
+  margin-bottom: 0rem;
 }
 </style>
 
@@ -93,7 +138,7 @@ font-size: small
 
     <div class="row narrow">
         <div class="col-full s-content__header">
-            <h3 >{{about.Info_titre}} </h3>
+            <h3 class="info">{{about.Info_titre}} </h3>
             <p class="lead">
 
             {{about.Introduction | safe}}</p>
@@ -145,7 +190,7 @@ font-size: small
 <div class="codehub-intro ">
   <div class="row narrow">
       <div class="col-full s-content__header">
-          <h3 >Nos partenaires </h3>
+          <h3 >{{about.nos_partenaire}} </h3>
 
       </div>
 

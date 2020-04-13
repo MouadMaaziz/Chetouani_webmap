@@ -289,7 +289,7 @@
  .header-video .lead{
      position:absolute;
      z-index:5;
-     top:74%;
+     top:84%;
      left:30%;
      font-family:"lora-regular", sans-serif;
      font-size:1.7rem;
@@ -998,6 +998,7 @@
          font-size: 1rem;
          line-height: 1.4rem;
          width: 90%;
+         text-align: center;
     }
      .header-video .lead{
          top:65%;
@@ -1201,6 +1202,7 @@
          left:8%;
          font-size:60%;
          line-height:1.4rem;
+         text-align: center;
     }
      .header-video__play-trigger {
          padding: 1em 3em;

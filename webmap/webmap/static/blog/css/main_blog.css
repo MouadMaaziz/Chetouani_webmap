@@ -2956,7 +2956,7 @@ body.search-is-visible {
 }
 
 .s-content--top-padding {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .s-content__header {
@@ -4267,6 +4267,7 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 
 .s-content--narrow h4.quarter-top-margin {
   margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .s-content--narrow h4.half-top-margin {

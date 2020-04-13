@@ -50,7 +50,7 @@ class Accueil_page(models.Model):
     video_phrase1 = models.CharField(max_length=200,default='WE ARE HERE TO CREATE A LASTING RELATIONSHIP WITH YOU')
     video_titre = models.CharField(max_length=200,default='STE CHETOUANI TOPOGRAPHIE & GEOMATIQUE')
     video_phrase2 = models.CharField(max_length=200,default='GEOMATIQUE- AMENAGEMENT- EXPERTISE FINANCIER')
-    Intro = models.TextField(max_length=1000)
+    Intro = RichTextUploadingField(max_length=100000)
     prestations_section= models.CharField(max_length=200,default='Nos prestations du service')
     actualite_section= models.CharField(max_length=200,default='Nos actualites')
     def __str__(self):
@@ -77,6 +77,7 @@ class About(models.Model):
     nos_Missions = RichTextUploadingField(max_length=100000)
     vision= models.CharField(max_length=300,default='notre vision')
     notre_Vision = RichTextUploadingField(max_length=100000)
+    nos_partenaire= models.CharField(max_length=300,default='Nos clients et partenaires')
     def __str__(self):
         return self.Introduction
 
