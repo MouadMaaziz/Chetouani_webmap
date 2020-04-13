@@ -4355,4 +4355,10 @@ footer [class*="s-footer__"] > .row [class*="col-"]:last-child {
 .imgblg{
   text-align: center;
 }
+.pres{
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.6rem;
+
+}
+
 /*# sourceMappingURL=main.css.map */
