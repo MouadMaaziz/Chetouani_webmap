@@ -92,6 +92,18 @@ class Tete_de_page(models.Model):
     def __str__(self):
         return self.Accueil
 
+
+class Menu_bar(models.Model):
+    Accueil= models.CharField(null=True, blank= True,max_length= 80, default= 'Accueil')
+    Contact= models.CharField(null=True, blank= True,max_length= 80, default= 'Contact')
+    A_propos= models.CharField(null=True, blank= True,max_length= 80, default= 'Accueil')
+    Prestations= models.CharField(null=True, blank= True,max_length= 80, default= 'A_propos')
+    Actualite= models.CharField(null=True, blank= True,max_length= 80, default= 'Actualite')
+
+
+    def __str__(self):
+        return self.Accueil
+
 class Pied_de_page(models.Model):
     section_1= models.TextField(null=True, blank= True,default='Qui somme nous?')
     contenu_1= models.TextField(null=True, blank= True)

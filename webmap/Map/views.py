@@ -1,7 +1,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from .models import Webmap, About, Pied_de_page , Message, Prestations_page, Contact_page, Tete_de_page, Accueil_page, Partenairs
+from .models import Webmap, About, Pied_de_page , Message, Prestations_page, Contact_page, Tete_de_page, Accueil_page, Partenairs, Menu_bar
 from Blog_app.models import Portfolio
 from django.core.mail import send_mail
 from django.conf import settings
@@ -28,7 +28,8 @@ def base_view(request,*args,**kwargs):
     abouts= About.objects.all()
     contacts= Pied_de_page.objects.all()
     tete=Tete_de_page.objects.all()
-    return render(request,"base.html" ,{'about':abouts[0],'contact':contacts[0],'tete':tete[0]})
+    Menu=Menu_bar.objects.all()
+    return render(request,"base.html" ,{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'menu':Menu[0]})
 
 
 def contact_view(request,*arg,**kwargs):
