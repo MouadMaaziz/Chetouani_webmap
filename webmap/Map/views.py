@@ -15,8 +15,9 @@ def home_view(request,*args,**kwargs):
     services= Prestations_page.objects.all()
     tete=Tete_de_page.objects.all()
     Accueil=Accueil_page.objects.all()
+    Menu=Menu_bar.objects.all()
     #return HttpResponse("hello Grey")
-    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'serv':services,'tete':tete[0],'Accueil':Accueil[0]})
+    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'serv':services,'tete':tete[0],'Accueil':Accueil[0],'menu':Menu[0]})
 
 def webmap_view(request,*args,**kwargs):
     maps= Webmap.objects.all()
@@ -44,7 +45,8 @@ def contact_view(request,*arg,**kwargs):
     abouts= About.objects.all()
     contenu= Contact_page.objects.all()
     tete=Tete_de_page.objects.all()
-    return render(request,"contact.html",{'about':abouts[0],'contact':contacts[0],'contpg':contenu[0],'tete':tete[0]})
+    Menu=Menu_bar.objects.all()
+    return render(request,"contact.html",{'about':abouts[0],'contact':contacts[0],'contpg':contenu[0],'tete':tete[0],'menu':Menu[0]})
 
 
 def about_view(request,*arg,**kwargs):
@@ -54,7 +56,8 @@ def about_view(request,*arg,**kwargs):
     services= Prestations_page.objects.all()
     tete=Tete_de_page.objects.all()
     part= Partenairs.objects.all()
-    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part})
+    Menu=Menu_bar.objects.all()
+    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part,'menu':Menu[0]})
 
 
 def prestations_view(request,prestation_id):
@@ -63,4 +66,5 @@ def prestations_view(request,prestation_id):
     tete=Tete_de_page.objects.all()
     contacts= Pied_de_page.objects.all()
     abouts= About.objects.all()
-    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0]})
+    Menu=Menu_bar.objects.all()
+    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0],'menu':Menu[0]})
