@@ -96,8 +96,8 @@ class Tete_de_page(models.Model):
 class Menu_bar(models.Model):
     Accueil= models.CharField(null=True, blank= True,max_length= 80, default= 'Accueil')
     Contact= models.CharField(null=True, blank= True,max_length= 80, default= 'Contact')
-    A_propos= models.CharField(null=True, blank= True,max_length= 80, default= 'Accueil')
-    Prestations= models.CharField(null=True, blank= True,max_length= 80, default= 'A_propos')
+    A_propos= models.CharField(null=True, blank= True,max_length= 80, default= 'A_propos')
+    Prestations= models.CharField(null=True, blank= True,max_length= 80, default= 'prestations')
     Actualite= models.CharField(null=True, blank= True,max_length= 80, default= 'Actualite')
 
 
