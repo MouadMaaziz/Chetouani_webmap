@@ -34,7 +34,9 @@
 h1, .h1{
   font-size: 3.6rem;
 }
-
+.info{
+  margin-bottom: 0rem;
+}
 
 </style>
 <body id="top">
@@ -96,12 +98,12 @@ h1, .h1{
 
             <div class="row block-1-2 block-tab-full">
                 <div class="col-block">
-                    <h2 class="quarter-top-margin">{{presdet.sous_titre1}}</h2>
+                    <h3 class="quarter-top-margin info">{{presdet.sous_titre1}}</h3>
                     <p>{{presdet.par1 | safe}}</p>
                 </div>
 
                 <div class="col-block">
-                    <h2 class="quarter-top-margin">{{presdet.sous_titre2}}</h2>
+                    <h3 class="quarter-top-margin info">{{presdet.sous_titre2}}</h3>
                     <p>{{presdet.par2 | safe}}</p>
                 </div>
 
