@@ -67,4 +67,6 @@ def prestations_view(request,prestation_id):
     contacts= Pied_de_page.objects.all()
     abouts= About.objects.all()
     Menu=Menu_bar.objects.all()
-    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0],'menu':Menu[0]})
+    services= Prestations_page.objects.all()
+    Accueil=Accueil_page.objects.all()
+    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0],'menu':Menu[0],'serv':services,'Accueil':Accueil[0]})

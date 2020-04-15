@@ -16,7 +16,17 @@
     <link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
     <link rel="stylesheet" href="{% static 'app/glide/glide.core.min.css' %}">
     <link rel="stylesheet" href="{% static 'app/glide/glide.theme.min.css' %}">
+<style>
+  @media screen and (max-width: 375px){
+      .codehub-intro .codehub-section {
+      margin-bottom: -8rem;
+  }}
+  @media screen and (max-width: 600px){
+      .codehub-intro .codehub-section {
+      margin-bottom: -8rem;
+  }}
 
+</style>
   <body>
 
 <section id="intro">
@@ -68,8 +78,8 @@
                     <div class="codehub-section ">
 
                    <span class="icon"><a href="{% url 'presdetails' s.id %}"> <i class="{{s.Icon}}"></i></a> </span>
-                    <h1><a href="{% url 'presdetails' s.id %}">{{s.Titre}}</a></h1>
-                    <a href="{% url 'presdetails' s.id %}">{{s.Description}}</a>
+                    <h5><a href="{% url 'presdetails' s.id %}">{{s.Titre}}</a></h5>
+                    <h4 class="desc"><a href="{% url 'presdetails' s.id %}">{{s.Description}}</a></h4>
 
                 </div></li>
                 {% endfor %}

@@ -8,76 +8,166 @@
     <link rel="stylesheet" href="{% static 'blog/css/base_blog.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/vendor_blog.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/main_blog.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/glide/glide.core.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app/glide/glide.theme.min.css' %}">
 
     <!-- script <script src="js/modernizr.js"></script>
     ================================================== -->
+<style>
+
+  .codehub-intro h1 {
+    padding-top: 15%;
+  }
+@media screen and (min-width: 1300px){
+  .codehub-intro h1 {
+    padding-top: 10%;
+  }}
+@media screen and (max-width: 375px){
+    .codehub-intro .codehub-section {
+    margin-bottom: -8rem;
+}}
+@media screen and (max-width: 600px){
+    .codehub-intro .codehub-section {
+    margin-bottom: -8rem;
+}}
 
 
-</head>
+
+</style>
 <body id="top">
 
 
 
     <!-- s-content
     ================================================== -->
-    <section class="s-content s-content--top-padding s-content--narrow">
+  <section id="codehub-intro">
+        <div class="codehub-intro ">
+            <h1 class="header_pres">{{Accueil.prestations_section}}</h1>
 
-        <article class="row entry format-standard">
+              <div class="codehub-content ">
+                <div class="glide">
+                  <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                      {% for s in serv %}
+                      <li class="glide__slide">
+                        <div class="codehub-section ">
 
-            <div class="col-full s-content__header">
-                <div class="entry__post-thumb">
-                  <p class="imgblg">
-                    <img src="{{presdet.Photo.url}}"
-                         srcset="{{presdet.Photo.url}} 2000w,
-                                 {{presdet.Photo.url}} 1000w,
-                                {{presdet.Photo.url}} 500w"
-                         sizes="(max-width: 2000px) 100vw, 2000px" alt="">
-                         </p>
-                </div>
-            </div>
+                       <span class="icon"><a href="{% url 'presdetails' s.id %}"> <i class="{{s.Icon}}"></i></a> </span>
+                        <h5><a href="{% url 'presdetails' s.id %}">{{s.Titre}}</a></h5>
+                        <h4 class="desc"><a href="{% url 'presdetails' s.id %}">{{s.Description}}</a></h4>
 
-            <div class="entry__header col-full">
-                <h1 class="entry__header-title display-1">
-                    {{presdet.Titre}}
-                </h1>
-                <ul class="entry__header-meta">
+                    </div></li>
+                    {% endfor %}
+
                 </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left " data-glide-dir="<"> <i class="fas fa-arrow-left"></i></button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> <i class="fas fa-arrow-right"></i></button>
+            </div>
             </div>
 
-            <div class="col-full entry__main">
+            </div>
 
-                <p class="lead drop-cap">{{presdet.Contenu | safe}}</p>
+        </div>
+        <div class="separator">
+        <img src="{% static 'app/img/crosshair-long2.png' %}" alt=""class="separator" > </div>
+    </section>
+<!-- ====================================================================================  -->
+<section class="s-content s-content--top-padding s-content--narrow">
 
-            </div> <!-- s-entry__main -->
-            <div class="col-full entry__main">
+    <div class="row narrow">
+        <div class="col-full s-content__header">
+            <h1 class="info">{{presdet.Titre}} </h1>
+            <p class="lead">
 
+            {{presdet.Introduction | safe}}</p>
 
-        <!--       <div class="entry__author">
-                    <img src="{{about.Photo_Personel.url}}" alt="">
+        </div>
+        <hr>
+    </div>
 
-                    <div class="entry__author-about">
-                        <h5 class="entry__author-name">
-                            <span>Posted by</span>
-                            <a href="#0">{{presdet.auteur}}</a>
-                        </h5>
-
-                        <div class="entry__author-desc">
-                            <p>
-                            {{about.qui_Somme_Nous | safe}}
-                            </p>
-                        </div>
-                    </div>
-                </div -->
-
-            </div> <!-- s-entry__main -->
-
-        </article> <!-- end entry/article -->
+<div class="row">
+        <div class="">
 
 
+            <div class="row block-1-2 block-tab-full">
+                <div class="col-block">
+                    <h2 class="quarter-top-margin">{{presdet.sous_titre1}}</h2>
+                    <p>{{presdet.par1 | safe}}</p>
+                </div>
 
-    </section> <!-- end s-content -->
+                <div class="col-block">
+                    <h2 class="quarter-top-margin">{{presdet.sous_titre2}}</h2>
+                    <p>{{presdet.par2 | safe}}</p>
+                </div>
 
-    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'blog/js/plugins.js' %}"></script>
-    <script src="{% static 'blog/js/main.js' %}"></script>
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">{{presdet.sous_titre3}}</h4>
+                    <p>{{presdet.par3 | safe}}</p>
+                </div>
+
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">{{presdet.sous_titre4}}</h4>
+                    <p>{{presdet.par4 | safe}}</p>
+                </div>
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">{{presdet.sous_titre5}}</h4>
+                    <p>{{presdet.par5 | safe}}</p>
+                </div>
+                <div class="col-block">
+                    <h4 class="quarter-top-margin">{{presdet.sous_titre6}}</h4>
+                    <p>{{presdet.par6 | safe}}</p>
+                </div>
+
+            </div>
+
+        </div>
+<br><br>
+<div class="col-full s-content__header">
+    <div class="entry__post-thumb">
+      <p class="imgblg">
+        <img src="{{presdet.Photo.url}}"
+             srcset="{{presdet.Photo.url}} 2000w,
+                     {{presdet.Photo.url}} 1000w,
+                    {{presdet.Photo.url}} 500w"
+             sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+             </p>
+    </div>
+</div>
+
+</div>
+
+
+</section> <!-- end s-content -->
+
+
+
+
+
+<script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'blog/js/plugins.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+<script src="{% static 'app/glide/glide.min.js' %}"></script>
+<script>
+      const config= {
+        type: 'carousel',
+        perView: 5,
+
+        breakpoints: {
+          1024:{
+            perView: 3
+          },
+          600: {
+            perView: 2
+          }
+        },
+        peek: {
+        before: 20,
+        after: 50
+      }
+      };
+      new Glide('.glide', config).mount()
+</script>
 {% endblock %}
