@@ -39,18 +39,31 @@ h1, .h1{
 }
 .ar{
   text-align: right;
+  direction: rtl;
 }
+.codehub-intro {
+    background: #100e17 url("{{presdet.Photo.url}}") center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#codehub-content{
+background: #111111;
+opacity: .85;
+}
+
 </style>
 <body id="top">
-
 
 
     <!-- s-content
     ================================================== -->
   <section id="codehub-intro">
         <div class="codehub-intro ">
-            <h1 class="header_pres">{{Accueil.prestations_section}}</h1>
 
+            <div id="codehub-content">
+              <h1 class="header_pres">{{Accueil.prestations_section}}</h1>
               <div class="codehub-content ">
                 <div class="glide">
                   <div class="glide__track" data-glide-el="track">
@@ -75,7 +88,7 @@ h1, .h1{
             </div>
 
             </div>
-
+              </div>
         </div>
         <div class="separator">
         <img src="{% static 'app/img/crosshair-long2.png' %}" alt=""class="separator" > </div>
@@ -131,17 +144,6 @@ h1, .h1{
 
         </div>
 <br><br>
-<div class="col-full s-content__header">
-    <div class="entry__post-thumb">
-      <p class="imgblg">
-        <img src="{{presdet.Photo.url}}"
-             srcset="{{presdet.Photo.url}} 2000w,
-                     {{presdet.Photo.url}} 1000w,
-                    {{presdet.Photo.url}} 500w"
-             sizes="(max-width: 2000px) 100vw, 2000px" alt="">
-             </p>
-    </div>
-</div>
 
 </div>
 
