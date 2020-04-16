@@ -367,6 +367,7 @@ textarea {
   width: 89%;
   max-width: 1200px;
   margin: 0 auto;
+  height: 30%;
 }
 
 .row:after {
