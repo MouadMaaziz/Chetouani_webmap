@@ -26,7 +26,7 @@ SECRET_KEY = '=_j#^9l4f6b^)-07)057&mcgs#tbbnyu^!p7f%52+#l426b_b$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.79.159.251','www.chetopgeo.com','chetopgeo.com']
+ALLOWED_HOSTS = ['178.79.159.251','www.chetopgeo.com']
 
 
 # Application definition
