@@ -30,11 +30,11 @@
 }
 .loading-img{
   position: absolute;
-  height: 100px;
-  left: 50%;
-  top: 49.5%;
-  width: 150px;
-  height: 150px;
+
+  left: 49.8%;
+  top: 49.1%;
+  width: 153px;
+  height: 156px;
   margin: -30px 0 0 -50px;
   padding: 0;
 }
@@ -108,10 +108,10 @@
 }
  #loader:before{
      content: "";
-     border-top: 10px solid rgb(255, 255, 255);
-     border-right: 10px solid rgb(255, 255, 255, 0.1);
-     border-bottom: 10px solid rgb(255, 255, 255, 0.1);
-     border-left: 13px solid  #000;
+     border-top: 12px solid rgb(255, 255, 255);
+     border-right: 12px solid rgb(255, 255, 255, 0.1);
+     border-bottom: 12px solid rgb(255, 255, 255, 0.1);
+     border-left: 12px solid  #000;
      -webkit-animation: load 1.1s infinite linear;
      animation: load 1.1s infinite linear;
      display: block;

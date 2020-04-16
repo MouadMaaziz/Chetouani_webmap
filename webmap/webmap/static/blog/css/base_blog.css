@@ -556,6 +556,7 @@ textarea {
     width: auto;
     padding-left: 25px;
     padding-right: 25px;
+    height: 30%;
   }
 
   .row .row {
