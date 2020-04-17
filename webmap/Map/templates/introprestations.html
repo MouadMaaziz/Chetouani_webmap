@@ -42,7 +42,7 @@ h1, .h1{
   direction: rtl;
 }
 .codehub-intro {
-    background: #100e17 url("{{presdet.Photo.url}}") center center no-repeat;
+    background: #100e17 url("{{intro.Image.url}}") center center no-repeat;
     background-attachment: inherit;
     background-size: cover;
     width: 100%;
@@ -98,54 +98,16 @@ opacity: .55;
 
     <div class="row narrow">
         <div class="col-full s-content__header">
-            <h2 class="info">{{presdet.Titre}} </h2>
+
             <p class="lead">
 
-            {{presdet.Introduction | safe}}</p>
+            {{intro.Introduction | safe}}</p>
 
         </div>
         <hr>
     </div>
 
-<div class="row">
-        <div class="">
 
-
-            <div class="row block-1-2 block-tab-full">
-                <div class="col-block">
-                    <h3 class="quarter-top-margin info" id="par1">{{presdet.sous_titre1}}</h3>
-                    <p>{{presdet.par1 | safe}}</p>
-                </div>
-
-                <div class="col-block ar ">
-                    <h3 class="quarter-top-margin info"id="par2">{{presdet.sous_titre2}}</h3>
-                    <p>{{presdet.par2 | safe}}</p>
-                </div>
-
-                <div class="col-block">
-                    <h3 class="quarter-top-margin info"id="par3">{{presdet.sous_titre3}}</h3>
-                    <p>{{presdet.par3 | safe}}</p>
-                </div>
-
-                <div class="col-block ar">
-                    <h3 class="quarter-top-margin info"id="par4">{{presdet.sous_titre4}}</h3>
-                    <p>{{presdet.par4 | safe}}</p>
-                </div>
-                <div class="col-block">
-                    <h3 class="quarter-top-margin info"id="par5">{{presdet.sous_titre5}}</h3>
-                    <p>{{presdet.par5 | safe}}</p>
-                </div>
-                <div class="col-block ar">
-                    <h3 class="quarter-top-margin info"id="par6">{{presdet.sous_titre6}}</h3>
-                    <p>{{presdet.par6 | safe}}</p>
-                </div>
-
-            </div>
-
-        </div>
-<br><br>
-
-</div>
 
 
 </section> <!-- end s-content -->
@@ -159,26 +121,24 @@ opacity: .55;
 <script src="{% static 'blog/js/main.js' %}"></script>
 <script src="{% static 'app/glide/glide.min.js' %}"></script>
 <script>
-      const config= {
-        type: 'carousel',
-        perView: 5,
-        startAt: {{presdet.id}} -2,
+  const config= {
+    type: 'carousel',
+    perView: 5,
+    autoplay: 4000,
 
-        breakpoints: {
-          1024:{
-            perView: 3,
-            
-          },
-          600: {
-            perView: 3,
-
-          }
-        },
-        peek: {
-        before: 20,
-        after: 50
+    breakpoints: {
+      1024:{
+        perView: 3
+      },
+      600: {
+        perView: 2
       }
-      };
-      new Glide('.glide', config).mount()
+    },
+    peek: {
+    before: 20,
+    after: 50
+  }
+  };
+  new Glide('.glide', config).mount()
 </script>
 {% endblock %}

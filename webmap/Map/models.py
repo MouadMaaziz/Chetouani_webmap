@@ -160,3 +160,9 @@ class Prestations_page(models.Model):
 
         def __str__(self):
             return self.Titre
+
+class Intro_prestation(models.Model):
+    Introduction= RichTextUploadingField( null=True, blank= True)
+    Image= models.ImageField(upload_to='')
+    def __str__(self):
+        return self.Introduction

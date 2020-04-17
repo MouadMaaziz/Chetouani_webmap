@@ -17,6 +17,7 @@ urlpatterns = [
     #path('prestations/', prestations_view,name='prestations'),
     path('<int:prestation_id>/', prestations_view,name='presdetails'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('introprestation/', introprestation_view,name='introprestation'),
 
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
