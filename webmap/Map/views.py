@@ -16,8 +16,9 @@ def home_view(request,*args,**kwargs):
     tete=Tete_de_page.objects.all()
     Accueil=Accueil_page.objects.all()
     Menu=Menu_bar.objects.all()
+    contenu= Contact_page.objects.all()
     #return HttpResponse("hello Grey")
-    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'serv':services,'tete':tete[0],'Accueil':Accueil[0],'menu':Menu[0]})
+    return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'serv':services,'tete':tete[0],'Accueil':Accueil[0],'menu':Menu[0],'contpg':contenu[0]})
 
 def webmap_view(request,*args,**kwargs):
     maps= Webmap.objects.all()
@@ -57,7 +58,8 @@ def about_view(request,*arg,**kwargs):
     tete=Tete_de_page.objects.all()
     part= Partenairs.objects.all()
     Menu=Menu_bar.objects.all()
-    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part,'menu':Menu[0]})
+    contenu= Contact_page.objects.all()
+    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part,'menu':Menu[0],'contpg':contenu[0]})
 
 
 def prestations_view(request,prestation_id):
@@ -69,4 +71,5 @@ def prestations_view(request,prestation_id):
     Menu=Menu_bar.objects.all()
     services= Prestations_page.objects.all()
     Accueil=Accueil_page.objects.all()
-    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0],'menu':Menu[0],'serv':services,'Accueil':Accueil[0]})
+    contenu= Contact_page.objects.all()
+    return render(request,"prestations.html",{'presdet':detailpres, 'contact':contacts[0],'tete':tete[0],'about':abouts[0],'menu':Menu[0],'serv':services,'Accueil':Accueil[0],'contpg':contenu[0]})
