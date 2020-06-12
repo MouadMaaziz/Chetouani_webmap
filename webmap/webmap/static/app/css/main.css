@@ -489,6 +489,7 @@
  .codehub-section .icon{
      display:inline-block;
      margin-bottom:2.1rem;
+     margin-top: 1rem;
 }
  .codehub-section .icon i{
      font-size:8rem;
