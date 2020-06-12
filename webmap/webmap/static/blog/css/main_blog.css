@@ -1610,6 +1610,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   vertical-align: bottom;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+  height: 180px;
 }
 
 .entries .item-entry__thumb-link::before {
@@ -1678,7 +1681,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .entries .item-entry__title {
-  font-family: "Libre Baskerville", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2.8rem;
   line-height: 1.286;
   margin-top: 0;
