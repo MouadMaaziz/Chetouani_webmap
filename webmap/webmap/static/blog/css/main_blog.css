@@ -1686,6 +1686,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   line-height: 1.286;
   margin-top: 0;
   margin-bottom: 4.5rem;
+  text-transform: uppercase;
 }
 
 .entries .item-entry__title a {
@@ -1706,6 +1707,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
+  color: #0009
 }
 
 .entries .item-entry__cat a:hover, .entries .item-entry__cat a:focus {
