@@ -479,11 +479,12 @@
      flex-basis:300px;
      flex-grow:0;
      height:auto;
-     background:transparent;
+     background:#000;
      border:none;
-    
+
      overflow:hidden;
      position:relative;
+     height: 250px;
 }
  .codehub-section .icon{
      display:inline-block;
