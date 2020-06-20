@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'Blog_app',
     'ckeditor',
     'ckeditor_uploader',
+    'folium'
 
 
 
