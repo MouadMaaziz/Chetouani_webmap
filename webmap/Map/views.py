@@ -81,10 +81,7 @@ def folium_view(request,*args,**kwargs):
 
     # ===========================================================filtering using data ===========================================================================================================
     for y in data:
-        grpopup = "<div class = popupdiv><img class='popupimg' src ="+ y.link + '>'+"<br><p class='strong'>"+y.Nom+"</p>"+"<p class='desc'>"+ y.Adress+ '<br>' + y.Services + "</p></div>" +
-            "<div class= ''>"+ Description_si_disop + '</div> <br>'+
-            "<span class='fas fa-map-pin'></span> "+ Adress + '<br>'+
-            "<div class= 'telpop'>"+ Tel + '</div><br>'
+        grpopup = "<div class = popupdiv><img class='popupimg' src ="+ y.link + '>'+"<br><p class='strong'>"+y.Nom+"</p>"+"<p class='desc'>"+ y.Adress+ '<br>' + y.Services + "</p></div>" +"<div class= ''>"+ Description_si_disop + '</div> <br>'+"<span class='fas fa-map-pin'></span> "+ Adress + '<br>'+"<div class= 'telpop'>"+ Tel + '</div><br>'
         grimgurl= media_url +'/'+ y.img.name
         grcustomIcon = folium.features.CustomIcon(grimgurl, icon_size=(30,30))
         #-----------------------------------------Criterea 1 ---------------------------------------------------------
