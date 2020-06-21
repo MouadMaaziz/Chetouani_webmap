@@ -49,7 +49,7 @@ def folium_view(request,*args,**kwargs):
     folium.TileLayer('Stamen Watercolor').add_to(m)
     plugins.Fullscreen(position='bottomright',title='Expand me',title_cancel='Exit me',force_separate_button=True).add_to(m)
     #plugins.Geocoder().add_to(m)
-    plugins.LocateControl(auto_start=False).add_to(m)
+    plugins.LocateControl(auto_start=False,initial_zoom_level: 10).add_to(m)
 
     #Measure control
     m.add_child(MeasureControl(position='topleft'))
