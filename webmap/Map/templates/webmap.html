@@ -295,7 +295,14 @@
     // sizeModes: ['A4Portrait', 'A4Landscape']
     // }).addTo(map);
 
-    L.control.locate({initialZoomLevel: 8}).addTo(map);
+    L.control.locate({
+        initialZoomLevel: 10,
+        locateOptions: {
+               enableHighAccuracy: true
+}
+
+
+    }).addTo(map);
 
 
   };
