@@ -153,7 +153,8 @@ def contact_view(request,*arg,**kwargs):
 
 
 def about_view(request,*arg,**kwargs):
-
+    data= Webmap.object.all()[:50]
+    m = folium.Map([29,-8.86],tiles='OpenStreetMap' , zoom_start=5)
     portfolios = Portfolio.objects.all().order_by('-pk')
     abouts= About.objects.all()
     contacts= Pied_de_page.objects.all()
@@ -162,7 +163,7 @@ def about_view(request,*arg,**kwargs):
     part= Partenairs.objects.all()
     Menu=Menu_bar.objects.all()
     contenu= Contact_page.objects.all()
-    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part,'menu':Menu[0],'contpg':contenu[0]})
+    return render(request,"about.html",{'about':abouts[0],'contact':contacts[0],'tete':tete[0],'list':portfolios[:4],'serv':services, 'part':part,'menu':Menu[0],'contpg':contenu[0],'mymap':m})
 
 
 def prestations_view(request,prestation_id):
