@@ -50,7 +50,11 @@
 <!-- Live location control -->
 <link rel="stylesheet" href="{% static 'plugins/locatecontrol/src/L.Control.Locate.scss'%}" />
 
-<!-- Geocoding control -->
+<!-- locate control -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@[VERSION]/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
 <style>
 
@@ -290,6 +294,8 @@
     // position: 'bottomleft',
     // sizeModes: ['A4Portrait', 'A4Landscape']
     // }).addTo(map);
+
+    L.control.locate().addTo(map);
 
 
   };
