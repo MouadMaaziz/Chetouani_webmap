@@ -26,12 +26,12 @@ def home_view(request,*args,**kwargs):
     #return HttpResponse("hello Grey")
     return render(request,"home.html" ,{'list':portfolios[:4],'about':abouts[0],'contact':contacts[0],'serv':services,'tete':tete[0],'Accueil':Accueil[0],'menu':Menu[0],'contpg':contenu[0]})
 
-#def webmap_view(request,*args,**kwargs):
- #   maps= Webmap.objects.all()
- #   #return HttpResponse("hello Grey")
- #   return render(request,"webmap.html" ,{'proj':maps})
-
 def webmap_view(request,*args,**kwargs):
+    maps= Webmap.objects.all()
+    #return HttpResponse("hello Grey")
+    return render(request,"webmap.html" ,{'proj':maps})
+
+def folium_view(request,*args,**kwargs):
 
     #================================================== Model data================================================
     data= Webmap.object.all()[:50]
@@ -127,6 +127,7 @@ def webmap_view(request,*args,**kwargs):
 
 
 def base_view(request,*args,**kwargs):
+
     #return HttpResponse("hello Grey")
     abouts= About.objects.all()
     contacts= Pied_de_page.objects.all()
@@ -152,6 +153,7 @@ def contact_view(request,*arg,**kwargs):
 
 
 def about_view(request,*arg,**kwargs):
+
     portfolios = Portfolio.objects.all().order_by('-pk')
     abouts= About.objects.all()
     contacts= Pied_de_page.objects.all()
