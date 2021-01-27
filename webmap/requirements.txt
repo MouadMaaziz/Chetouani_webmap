@@ -39,7 +39,7 @@ django-xmlrpc==0.1.8
 entrypoints==0.3
 extras==1.0.0
 fixtures==2.0.0
-Flask==0.11.1
+Flask==1.0
 Flask-Babel==0.11.1
 Flask-Gravatar==0.4.2
 Flask-HTMLmin==1.2
