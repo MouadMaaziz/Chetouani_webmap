@@ -116,7 +116,7 @@ ssh-import-id==5.7
 systemd-python==234
 testtools==2.3.0
 traceback2==1.4.0
-Twisted==18.9.0
+Twisted==22.1.0
 ua-parser==0.8.0
 ubuntu-advantage-tools==19.5
 ufw==0.36
