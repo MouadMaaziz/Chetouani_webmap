@@ -54,7 +54,7 @@ Flask-WTF==0.12
 gunicorn==18.0
 html5lib==1.0b3
 htmlmin==0.1.12
-httplib2==0.11.3
+httplib2==0.19.0
 hyperlink==17.3.1
 idna==2.8
 importlib-metadata==0.22
